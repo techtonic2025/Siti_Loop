@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>STRYDA Secure Checkout</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#9df425",
+                        "background-light": "#f7f8f5",
+                        "background-dark": "#1a2210",
+                        "tactical-grey": "#1E1E1E",
+                        "deep-black": "#0c0f08",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .carbon-pattern {
+            background-color: #0c0f08;
+            background-image: linear-gradient(45deg, #111 25%, transparent 25%), 
+                              linear-gradient(-45deg, #111 25%, transparent 25%), 
+                              linear-gradient(45deg, transparent 75%, #111 75%), 
+                              linear-gradient(-45deg, transparent 75%, #111 75%);
+            background-size: 4px 4px;
+            background-position: 0 0, 0 2px, 2px 2px, 2px 0;
+        }
+        input:focus {
+            outline: none !important;
+            border-bottom-color: #9df425 !important;
+            box-shadow: 0 4px 6px -1px rgba(157, 244, 37, 0.1);
+        }
+        .shimmer-text {
+            background: linear-gradient(90deg, #9df425, #fff, #9df425);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white min-h-screen selection:bg-primary selection:text-black">
+<!-- Header -->
+<header class="border-b border-white/10 py-6 px-6 md:px-12 flex justify-between items-center bg-deep-black">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
+<span class="text-black font-bold text-xl">S</span>
+</div>
+<span class="text-2xl font-bold tracking-tighter">STRYDA</span>
+</div>
+<div class="hidden md:flex items-center gap-3 border border-primary px-4 py-2 rounded-sm bg-primary/5">
+<span class="material-icons text-primary text-sm animate-pulse">lock</span>
+<span class="text-[10px] uppercase tracking-[0.2em] font-bold text-primary">Secure Encrypted Checkout</span>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 md:px-12 py-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Column: Checkout Flow -->
+<div class="lg:col-span-7 space-y-12">
+<!-- 01. IDENTIFY -->
+<section class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="text-primary font-bold text-xl">01.</span>
+<h2 class="text-2xl font-bold tracking-widest uppercase">Identify</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-white/50 font-bold">Email Address</label>
+<input class="w-full bg-tactical-grey border-0 border-b-2 border-white/10 p-4 text-white placeholder:text-white/20 focus:ring-0 transition-colors" placeholder="OPERATOR@STRYDA.COM" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-white/50 font-bold">Comms Number</label>
+<input class="w-full bg-tactical-grey border-0 border-b-2 border-white/10 p-4 text-white placeholder:text-white/20 focus:ring-0 transition-colors" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+</div>
+</section>
+<!-- 02. DEPLOY -->
+<section class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="text-primary font-bold text-xl">02.</span>
+<h2 class="text-2xl font-bold tracking-widest uppercase">Deploy</h2>
+</div>
+<div class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<input class="bg-tactical-grey border-0 border-b-2 border-white/10 p-4 text-white placeholder:text-white/20 focus:ring-0" placeholder="FIRST NAME" type="text"/>
+<input class="bg-tactical-grey border-0 border-b-2 border-white/10 p-4 text-white placeholder:text-white/20 focus:ring-0" placeholder="LAST NAME" type="text"/>
+</div>
+<input class="w-full bg-tactical-grey border-0 border-b-2 border-white/10 p-4 text-white placeholder:text-white/20 focus:ring-0" placeholder="SHIPPING ADDRESS" type="text"/>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+<input class="bg-tactical-grey border-0 border-b-2 border-white/10 p-4 text-white placeholder:text-white/20 focus:ring-0" placeholder="CITY" type="text"/>
+<input class="bg-tactical-grey border-0 border-b-2 border-white/10 p-4 text-white placeholder:text-white/20 focus:ring-0" placeholder="STATE" type="text"/>
+<input class="bg-tactical-grey border-0 border-b-2 border-white/10 p-4 text-white placeholder:text-white/20 focus:ring-0" placeholder="ZIP" type="text"/>
+</div>
+<div class="pt-4 space-y-4">
+<label class="text-[10px] uppercase tracking-widest text-white/50 font-bold">Shipping Method</label>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<label class="relative group cursor-pointer">
+<input checked="" class="peer sr-only" name="shipping" type="radio"/>
+<div class="p-4 bg-tactical-grey border border-white/10 rounded-sm peer-checked:border-primary transition-all">
+<div class="flex justify-between items-center">
+<span class="text-sm font-bold uppercase tracking-wider">Ground Logistics</span>
+<span class="text-primary font-bold text-sm">$0.00</span>
+</div>
+<p class="text-[10px] text-white/40 mt-1 uppercase tracking-tighter italic">5-7 Combat Days</p>
+</div>
+</label>
+<label class="relative group cursor-pointer">
+<input class="peer sr-only" name="shipping" type="radio"/>
+<div class="p-4 bg-tactical-grey border border-white/10 rounded-sm peer-checked:border-primary transition-all">
+<div class="flex justify-between items-center">
+<span class="text-sm font-bold uppercase tracking-wider">Aerial Drop</span>
+<span class="text-primary font-bold text-sm">$15.00</span>
+</div>
+<p class="text-[10px] text-white/40 mt-1 uppercase tracking-tighter italic">Next Day Priority</p>
+</div>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- 03. SECURE -->
+<section class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="text-primary font-bold text-xl">03.</span>
+<h2 class="text-2xl font-bold tracking-widest uppercase">Secure</h2>
+</div>
+<div class="bg-tactical-grey p-8 border border-white/5 rounded-sm space-y-6">
+<div class="flex justify-between items-center mb-4">
+<div class="flex gap-2">
+<span class="material-icons text-white/20">credit_card</span>
+<span class="text-xs uppercase tracking-widest font-bold">Credit Card Payment</span>
+</div>
+<span class="material-icons text-primary text-lg">verified_user</span>
+</div>
+<div class="space-y-6">
+<div class="relative">
+<input class="w-full bg-black/40 border-0 border-b-2 border-white/10 p-4 text-white placeholder:text-white/20 focus:ring-0" placeholder="0000 0000 0000 0000" type="text"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 flex gap-1">
+<div class="w-6 h-4 bg-white/10 rounded-sm"></div>
+<div class="w-6 h-4 bg-white/10 rounded-sm"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<input class="bg-black/40 border-0 border-b-2 border-white/10 p-4 text-white placeholder:text-white/20 focus:ring-0" placeholder="MM/YY" type="text"/>
+<input class="bg-black/40 border-0 border-b-2 border-white/10 p-4 text-white placeholder:text-white/20 focus:ring-0" placeholder="CVC" type="password"/>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<div class="pt-4">
+<button class="w-full bg-primary hover:bg-primary/90 text-black font-bold py-6 text-xl uppercase tracking-[0.2em] transition-all shadow-[0_0_30px_rgba(157,244,37,0.2)] active:scale-[0.98]">
+                        Initiate Order
+                    </button>
+<div class="flex justify-center gap-8 mt-8 opacity-40">
+<div class="flex items-center gap-2">
+<span class="material-icons text-sm">shield</span>
+<span class="text-[10px] uppercase tracking-widest font-bold">256-Bit Encrypted</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-icons text-sm">history</span>
+<span class="text-[10px] uppercase tracking-widest font-bold">100% Money Back</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Sticky Summary -->
+<aside class="lg:col-span-5 lg:sticky lg:top-12">
+<div class="bg-tactical-grey border border-white/5 p-8 rounded-sm space-y-8">
+<h3 class="text-lg font-bold uppercase tracking-[0.3em] border-b border-white/10 pb-4">Your Arsenal</h3>
+<!-- Product List -->
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="w-20 h-20 bg-black rounded-sm border border-white/5 overflow-hidden flex-shrink-0">
+<img alt="Pre-Workout" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all" data-alt="High performance neon lime pre-workout supplement container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6RVbIaIz_eIQyTVxITzbTcu4LSrDgfWQWoDjLMDn3GXTf29FwXuw_6djX_s2xtjcy3QmKqqBN-Sbtw3ixoirKb-K59KFLenIIis66UUvj_DkdbIcvIENZcQ5Of9Cj_abmsz4yhFRHqSZQ6XaKtwZKzZeHyoi1ydPZxEAidgViAd8hcIKEy8jMNWj3cJh5HQyRmLji2XRhpuUrtPU-CXYXHCygitUS2ON4IC926yMvtoIeUQsObphgc4cDgdC1BpLTiQIkOpw6_PEE"/>
+</div>
+<div class="flex flex-col justify-center flex-grow">
+<div class="flex justify-between">
+<h4 class="text-sm font-bold uppercase tracking-wider">STRYDA Pre-Workout</h4>
+<span class="text-sm font-bold">$49.99</span>
+</div>
+<span class="text-[10px] text-primary uppercase font-bold mt-1">Flavor: Radioactive Lime</span>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-20 h-20 bg-black rounded-sm border border-white/5 overflow-hidden flex-shrink-0">
+<img alt="Gym Tee" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all" data-alt="Black athletic performance gym t-shirt with tactical fit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq2tYVed-3ERbAEQO_di_4AVc_Ya3xlvNU0s4cSQNJOpgsu-U8eyadZAhnsA0qVu07Aa15eX93bnLd-L66r61R5TgqRFSlYk3c4F5LE3wkob9k6Xf9rIeAlKqbDxKOuzClzRWjR8Pmd8Schn49f9u-GeooKTQMw--po52Af93NxvG3yEEz93gXjP8iWw-PcFmhcRxa0q4MgxCm7e7xgJo6rJqVDMTucWxTLkCHFBoje-hFo1BR9viDvluzNLn7oLhBJ-zXm_gsFr0i"/>
+</div>
+<div class="flex flex-col justify-center flex-grow">
+<div class="flex justify-between">
+<h4 class="text-sm font-bold uppercase tracking-wider">Tactical Gym Tee</h4>
+<span class="text-sm font-bold">$35.00</span>
+</div>
+<span class="text-[10px] text-primary uppercase font-bold mt-1">Size: Large / Black</span>
+</div>
+</div>
+</div>
+<!-- Totals -->
+<div class="border-t border-white/10 pt-6 space-y-4">
+<div class="flex justify-between text-xs uppercase tracking-widest font-bold text-white/50">
+<span>Subtotal</span>
+<span class="text-white">$84.99</span>
+</div>
+<div class="flex justify-between text-xs uppercase tracking-widest font-bold text-white/50">
+<span>Shipping</span>
+<span class="text-primary">Free</span>
+</div>
+<div class="flex justify-between text-xs uppercase tracking-widest font-bold text-white/50">
+<span>Tax (Calculated)</span>
+<span class="text-white">$0.00</span>
+</div>
+<div class="border-t border-primary/20 pt-6 flex justify-between items-end">
+<span class="text-xs uppercase tracking-[0.4em] font-bold text-white mb-2">Total Mission Cost</span>
+<span class="text-5xl font-black text-primary tracking-tighter">$84.99</span>
+</div>
+</div>
+<!-- Guarantee Card -->
+<div class="bg-primary/5 border border-primary/20 p-4 rounded-sm flex gap-4 items-center">
+<span class="material-icons text-primary text-3xl">verified</span>
+<div>
+<p class="text-[10px] font-bold uppercase tracking-widest">Ironclad Guarantee</p>
+<p class="text-[9px] text-white/60 uppercase leading-relaxed mt-1">Full extraction of funds if performance expectations aren't met within 30 days.</p>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="carbon-pattern border-t border-white/5 py-12 mt-24">
+<div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-4 opacity-30 grayscale">
+<div class="w-6 h-6 bg-white rounded-sm"></div>
+<span class="text-xs font-bold uppercase tracking-widest">STRYDA Logistics Corp.</span>
+</div>
+<div class="flex gap-8 text-[10px] uppercase tracking-[0.2em] font-bold text-white/40">
+<a class="hover:text-primary transition-colors" href="#">Privacy Ops</a>
+<a class="hover:text-primary transition-colors" href="#">Service Terms</a>
+<a class="hover:text-primary transition-colors" href="#">Support Comms</a>
+</div>
+<div class="text-[10px] uppercase tracking-widest text-white/20">
+                © 2024 STRYDA. MISSION READY.
+            </div>
+</div>
+</footer>
+</body></html>
