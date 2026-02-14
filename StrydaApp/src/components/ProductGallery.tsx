@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { products, Product } from '../data/products';
+import { products, type Product } from '../data/products';
 
 interface ProductCardProps {
     product: Product;

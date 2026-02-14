@@ -9,6 +9,7 @@ export interface Product {
     imageLifestyle?: string;
     inStock: boolean;
     featured?: boolean;
+    badge?: string;
 }
 
 export const products: Product[] = [
