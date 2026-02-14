@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>STRYDA | High-Performance Fitness &amp; Energy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#d9ff00",
+                "background-light": "#f8f8f5",
+                "background-dark": "#050505",
+                "surface-dark": "#1A1A1A",
+              },
+              fontFamily: {
+                "display": ["Space Grotesk"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #050505;
+        }
+        .text-glow:hover {
+            text-shadow: 0 0 10px rgba(217, 255, 0, 0.5);
+        }
+        .neon-border {
+            border: 1px solid #d9ff00;
+        }
+        .carbon-texture {
+            background-image: radial-gradient(#1a1a1a 0.5px, transparent 0.5px);
+            background-size: 4px 4px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-white font-display">
+<!-- Sticky Header -->
+<header class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/5">
+<nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+<div class="flex items-center gap-12">
+<a class="text-3xl font-bold tracking-tighter text-primary" href="#">STRYDA</a>
+<div class="hidden md:flex gap-8 text-sm font-bold tracking-widest uppercase">
+<a class="hover:text-primary transition-colors" href="#">Men</a>
+<a class="hover:text-primary transition-colors" href="#">Women</a>
+<a class="hover:text-primary transition-colors" href="#">Supplements</a>
+<a class="hover:text-primary transition-colors" href="#">Gear</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="hover:text-primary"><span class="material-icons">search</span></button>
+<button class="hover:text-primary"><span class="material-icons">person_outline</span></button>
+<button class="hover:text-primary relative">
+<span class="material-icons">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-black text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">0</span>
+</button>
+</div>
+</nav>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60 grayscale brightness-50" data-alt="Intense high-contrast fitness athlete training in dark gym" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-KpQ35mv4KBdi_UvWIEqG0Ris-KiuBumgI14ZzXvgneURbrc1jUKpCQ_QmaaSAalKgl6evzOXsZSlgBnQXBgRE6p_91ndsVL8hZjMIDqKDH_8U95WiZLmKWzwjO-LQiMFRQ2edKtWKdzzzMdjF7l5z9xnpv0A98YDLpjf24MsloC1eXCvrvlIK54W_WoyEnmdt7I1NOmaNyYtktoTrmGX37TXJmopX53WYhzer7Z761WqB883D-co_QNRecporQjfwnkLbyzKMgl8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-background-dark/50"></div>
+</div>
+<div class="relative z-10 container mx-auto px-6 text-center">
+<h1 class="text-6xl md:text-9xl font-bold tracking-tighter uppercase mb-6 leading-none">
+                Unleash Your <br/> <span class="text-primary">Potential</span>
+</h1>
+<p class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10 font-light tracking-wide">
+                Engineered for the elite. Powered by science. Designed for those who refuse to settle for average.
+            </p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<button class="bg-primary text-black font-bold py-4 px-10 rounded uppercase tracking-widest hover:bg-white transition-all transform hover:scale-105">
+                    Shop Now
+                </button>
+<button class="border border-white text-white font-bold py-4 px-10 rounded uppercase tracking-widest hover:bg-white hover:text-black transition-all">
+                    View Catalog
+                </button>
+</div>
+</div>
+</section>
+<!-- Category Section -->
+<section class="py-20 container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Supplements -->
+<div class="relative group h-96 overflow-hidden rounded bg-surface-dark">
+<img class="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" data-alt="Close up of fitness supplement containers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAieHA2shbOoWHga07ArrGOkxlMZw0EfFnDZOPObzGSuT-5zNy1S7Ru-2avDvfgnnsArs9FVziP63a_y0BF2RB6ysaq49JKFhrHnG5IWAn_3kv7TM6y2tSWAkF3yLwtI5Qkg7dfmYsymJzQpCiYK2R5YQdDQUo7lrxUeg60um9CIuC2cBwYEkQDhSA7blYrxXZqcHCnskshDiqDVdBtBdJSwh6_9Ay4MReCD6Fpy2HhRCVc0re0CsfTVL5DN1pHotjlL0UJaqI2ksO6"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h3 class="text-2xl font-bold uppercase tracking-tight mb-2">Supplements</h3>
+<a class="text-primary text-sm font-bold uppercase tracking-widest group-hover:underline" href="#">Explore More →</a>
+</div>
+<div class="absolute inset-0 border-2 border-transparent group-hover:border-primary transition-colors pointer-events-none"></div>
+</div>
+<!-- Apparel -->
+<div class="relative group h-96 overflow-hidden rounded bg-surface-dark">
+<img class="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" data-alt="High performance athletic compression apparel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVlowTXMpIefRwrNlQwywmkNRJkBZq50qvT0NL_H8SCKsP8_1K0mx5kQ5qtV38EHwJ2PTqqgCM0LUHYxQYHhVfSPydufq9hIJSNPnJjAhvun-K6wyBj0pfq8pb9_QERBdQYTRSLlZeAHZPcjfa8wXuOKbHoOsmS2UcfzZmHSXk75TEC0m612mkQ7g1XM9-pASz6-3fNalcLfrsMEeQJCV0F8dXxnas57ue8QxObH_o8x6R5gOHH0rLdDmfmc_-_LHJdlzVw_7CJOyo"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h3 class="text-2xl font-bold uppercase tracking-tight mb-2">Apparel</h3>
+<a class="text-primary text-sm font-bold uppercase tracking-widest group-hover:underline" href="#">Explore More →</a>
+</div>
+<div class="absolute inset-0 border-2 border-transparent group-hover:border-primary transition-colors pointer-events-none"></div>
+</div>
+<!-- Equipment -->
+<div class="relative group h-96 overflow-hidden rounded bg-surface-dark">
+<img class="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" data-alt="Heavy duty gym equipment and weights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4pUDbJPG3C2oZGWzIAIZSD-aOANoBEp3ql67llB2GaAOUeqUPwf4BgKesHt3Nd5mxletWM0JzcKJwwCnJ3OJvJmbeOWueB2qOWY-C0jwvxxQcX079YX3rF8xBMogvpJZnm0OYXkjIBNhwv9vEew5znzwCuIIfpJsLntucOvUNg2RdRcP4Ghhnf-E47r2AnAxLgNxDjAlOmOIWfVjoaNmqP8e1G4tPBjZloOJrCH4dt0vTrfZGjQUr-zKcVZiBKd2ZXBUkCZwBiyNE"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h3 class="text-2xl font-bold uppercase tracking-tight mb-2">Equipment</h3>
+<a class="text-primary text-sm font-bold uppercase tracking-widest group-hover:underline" href="#">Explore More →</a>
+</div>
+<div class="absolute inset-0 border-2 border-transparent group-hover:border-primary transition-colors pointer-events-none"></div>
+</div>
+<!-- Accessories -->
+<div class="relative group h-96 overflow-hidden rounded bg-surface-dark">
+<img class="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" data-alt="High tech fitness trackers and accessories" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD24ypDd1vgwYbi8LaUTm_cZxu8K2d1A4V0XnAs3slXX0YrqMv_uY8bteAHbn3vkBXutrLuT2zr8c4diCbeKsHZXfd2Fyj5ZEYwMwy04kbhjIopaifDXPLtWBwTARNoVHUoovCceXAkaYyjN-UMzz3Wz42JbHHh3XQ0gr0FALCu6mTe0jpHLO23GM90ZIBU7DkXEaSVVAUd5gHWtAb6sCVSJDZLZ5qSaNbutbjr1vmLRYkrU4OS3Krlo5dO7jU3pOIswpHDEqe2Rg5Q"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h3 class="text-2xl font-bold uppercase tracking-tight mb-2">Accessories</h3>
+<a class="text-primary text-sm font-bold uppercase tracking-widest group-hover:underline" href="#">Explore More →</a>
+</div>
+<div class="absolute inset-0 border-2 border-transparent group-hover:border-primary transition-colors pointer-events-none"></div>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="py-20 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto px-6">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h2 class="text-4xl font-bold uppercase tracking-tighter">Featured Gear</h2>
+<div class="h-1 w-20 bg-primary mt-4"></div>
+</div>
+<a class="text-sm font-bold uppercase tracking-widest text-primary hover:text-white transition-colors" href="#">View All Products</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product 1 -->
+<div class="bg-surface-dark group">
+<div class="relative aspect-square overflow-hidden bg-white/5">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Black protein powder tub with neon label" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQuI9UdIK0h12Ok1M5h0eixS_ir6LCA5Mdl8fJirDntTdGuhnD5qwHiV_J_wwuskOtlf8j5wNvkkws1iSRY4oIlq_vlxYE6rEmgeLlybs7FkxURMJ94z7_amsapWlvozhnXW6aWLuRfJcSXobZccnRnMcYzPygZKOHcpCB8WCYUNqYZFY7t2S_hd0kw0VwO7HVrPR99HtKKejsQcXnEWElFbzZo9RLTn2UU4VMgFh19sjYU-JaIEfrW5C0pUllPUkC3ohy-z8CgjpL"/>
+<span class="absolute top-4 left-4 bg-primary text-black text-[10px] font-black px-3 py-1 uppercase tracking-tighter">Best Seller</span>
+</div>
+<div class="p-6">
+<p class="text-white/50 text-xs uppercase tracking-widest mb-1">Performance</p>
+<h4 class="font-bold text-lg mb-2 uppercase group-hover:text-primary transition-colors">STRYDA ISO-WHEY</h4>
+<p class="text-primary font-bold text-xl mb-4">$64.99</p>
+<button class="w-full bg-white text-black font-bold py-3 uppercase tracking-widest text-sm hover:bg-primary transition-colors rounded-none">Add to Cart</button>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-surface-dark group">
+<div class="relative aspect-square overflow-hidden bg-white/5">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High quality gym weight lifting belt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1d6DGPIBfzLLC_wUcO4nciX5Vy2BiF0TvlI9pExj6nQG9tMJ-9dXLkCZp1Ic8Qy5ziLvgbNfSS4ZcuuDQvsvTa8d01FDXrHj0LIuYd7ev3S-hDMj0e8MxiMG6ifIj48bI-8eAzm44uShjMDEM4WOXf28-aZKNxM34mmtGUPmSYY10XIs54N2n4SP8XAcobla66zl3QTC_pqKpT74YZxynakJa91W8rCRWPzrebGNdsgCX-iPnfpc0iJH5Yaw8kNXCRYOrmKhAT-N8"/>
+</div>
+<div class="p-6">
+<p class="text-white/50 text-xs uppercase tracking-widest mb-1">Equipment</p>
+<h4 class="font-bold text-lg mb-2 uppercase group-hover:text-primary transition-colors">PRO SERIES LIFTING BELT</h4>
+<p class="text-primary font-bold text-xl mb-4">$89.00</p>
+<button class="w-full bg-white text-black font-bold py-3 uppercase tracking-widest text-sm hover:bg-primary transition-colors rounded-none">Add to Cart</button>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="bg-surface-dark group">
+<div class="relative aspect-square overflow-hidden bg-white/5">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Neon pre-workout bottle in dark setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyhp6Ft79zV_c-3TC2mBluWnT7NpdVlci8Lu7h6G9WEaelknDMLr9uVEGVO8ZbA4kcNFJuAt0u7xwFSzHgj-8ij5F6Dgd3imM7T1cIqnMWzI1MxiuGdJdG9pAI0V4S5MFnTSbWz2ChtCiELgReIR3EGXohgzSY7PC_F3vGOXovh6BnaEXdRon2ayTMql6mfor6GnCCi5lKMBfhx9WBS1oy5_oXkWxOcbw9mbJ4HKMEIOTvGE26iXx9LTcrZLMmbQEs0r3m8LTp2oRM"/>
+</div>
+<div class="p-6">
+<p class="text-white/50 text-xs uppercase tracking-widest mb-1">Energy</p>
+<h4 class="font-bold text-lg mb-2 uppercase group-hover:text-primary transition-colors">IGNITE PRE-WORKOUT</h4>
+<p class="text-primary font-bold text-xl mb-4">$45.50</p>
+<button class="w-full bg-white text-black font-bold py-3 uppercase tracking-widest text-sm hover:bg-primary transition-colors rounded-none">Add to Cart</button>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="bg-surface-dark group">
+<div class="relative aspect-square overflow-hidden bg-white/5">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Black compression shirt with minimal neon logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHaE2xZio-OVQcQMEpIzIAeBCme9KKJNxzj-YmrRGNiZsxrw_vlnazVAq_M6D893oUJl2NLFlKPK6RjDDsVX7g5Dflj7PN1f6PsyUMA8Irne5kNTdiG00ztrJO4yzX2QRA2yHrtnWZ-frzPIEXnz5dXm0UvxYMAwm9eHBz9neyvUiw5KgDv5EAbI_zZWcoxJt7zD92v3l62-VSvBQrdikFAIQhc7lfmVVYAvfQyvmrkQTIfijcBJCx9hHCBOaugdy1QpAMaI-ZDEBJ"/>
+</div>
+<div class="p-6">
+<p class="text-white/50 text-xs uppercase tracking-widest mb-1">Apparel</p>
+<h4 class="font-bold text-lg mb-2 uppercase group-hover:text-primary transition-colors">STRYDA TECH TEE</h4>
+<p class="text-primary font-bold text-xl mb-4">$38.00</p>
+<button class="w-full bg-white text-black font-bold py-3 uppercase tracking-widest text-sm hover:bg-primary transition-colors rounded-none">Add to Cart</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-24 bg-surface-dark">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="text-center">
+<div class="w-20 h-20 rounded-full border-2 border-primary flex items-center justify-center mx-auto mb-8 shadow-[0_0_15px_rgba(217,255,0,0.3)]">
+<span class="material-icons text-primary text-4xl">science</span>
+</div>
+<h3 class="text-xl font-bold uppercase tracking-widest mb-4">Science Based</h3>
+<p class="text-white/60 leading-relaxed">Formulated by PhD nutritionists using only clinically-backed dosages and premium ingredients.</p>
+</div>
+<div class="text-center">
+<div class="w-20 h-20 rounded-full border-2 border-primary flex items-center justify-center mx-auto mb-8 shadow-[0_0_15px_rgba(217,255,0,0.3)]">
+<span class="material-icons text-primary text-4xl">local_shipping</span>
+</div>
+<h3 class="text-xl font-bold uppercase tracking-widest mb-4">24hr Shipping</h3>
+<p class="text-white/60 leading-relaxed">Fastest shipping in the industry. Order by 2PM and your gear ships the same day.</p>
+</div>
+<div class="text-center">
+<div class="w-20 h-20 rounded-full border-2 border-primary flex items-center justify-center mx-auto mb-8 shadow-[0_0_15px_rgba(217,255,0,0.3)]">
+<span class="material-icons text-primary text-4xl">verified_user</span>
+</div>
+<h3 class="text-xl font-bold uppercase tracking-widest mb-4">Elite Quality</h3>
+<p class="text-white/60 leading-relaxed">No fillers. No junk. Only the highest-grade raw materials for maximum human performance.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-20">
+<div class="container mx-auto px-6">
+<div class="flex flex-col items-center mb-16">
+<h2 class="text-4xl font-bold uppercase tracking-tighter text-center">Elite Athlete Reviews</h2>
+<div class="h-1 w-20 bg-primary mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="p-8 bg-surface-dark border-l-4 border-primary">
+<div class="flex text-primary mb-6">
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+</div>
+<p class="text-white/80 italic mb-6">"The Ignite Pre-workout is on another level. I've never had focus like this during my heavy squat days. STRYDA is the real deal."</p>
+<p class="font-bold uppercase tracking-widest text-sm">— Marcus V. | Pro Powerlifter</p>
+</div>
+<div class="p-8 bg-surface-dark border-l-4 border-primary">
+<div class="flex text-primary mb-6">
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+</div>
+<p class="text-white/80 italic mb-6">"Finally an apparel line that doesn't just look good but actually survives my training sessions. The durability is unmatched."</p>
+<p class="font-bold uppercase tracking-widest text-sm">— Elena R. | CrossFit Games Athlete</p>
+</div>
+<div class="p-8 bg-surface-dark border-l-4 border-primary">
+<div class="flex text-primary mb-6">
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+<span class="material-icons">star</span>
+</div>
+<p class="text-white/80 italic mb-6">"Customer service is as fast as their shipping. Had a size issue and they resolved it within 15 minutes of my email."</p>
+<p class="font-bold uppercase tracking-widest text-sm">— Jason K. | Fitness Enthusiast</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter -->
+<section class="py-24">
+<div class="container mx-auto px-6">
+<div class="relative bg-black p-12 md:p-20 text-center rounded overflow-hidden">
+<div class="absolute inset-0 neon-border opacity-50 pointer-events-none"></div>
+<div class="relative z-10">
+<h2 class="text-4xl md:text-5xl font-bold uppercase tracking-tighter mb-4">Join the Movement</h2>
+<p class="text-white/60 mb-10 max-w-xl mx-auto">Get exclusive access to new drops, training tips, and 15% off your first order.</p>
+<form class="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto">
+<input class="flex-1 bg-surface-dark border border-white/20 text-white px-6 py-4 rounded-none focus:border-primary focus:ring-0 uppercase tracking-widest text-sm" placeholder="ENTER YOUR EMAIL" type="email"/>
+<button class="bg-primary text-black font-bold px-10 py-4 uppercase tracking-widest hover:bg-white transition-colors" type="submit">Subscribe</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-black pt-20 pb-10 relative overflow-hidden carbon-texture">
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 opacity-5 pointer-events-none select-none">
+<h1 class="text-[25vw] font-bold leading-none tracking-tighter text-white">STRYDA</h1>
+</div>
+<div class="container mx-auto px-6 relative z-10">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
+<div class="col-span-2 md:col-span-1">
+<a class="text-2xl font-bold tracking-tighter text-primary mb-8 block" href="#">STRYDA</a>
+<p class="text-white/50 text-sm leading-relaxed mb-6">
+                        Defying mediocrity. Fueling the elite. We are the architects of your peak performance.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-white/20 flex items-center justify-center hover:border-primary hover:text-primary transition-all" href="#"><span class="material-icons text-sm">facebook</span></a>
+<a class="w-10 h-10 border border-white/20 flex items-center justify-center hover:border-primary hover:text-primary transition-all" href="#"><span class="material-icons text-sm">camera_alt</span></a>
+<a class="w-10 h-10 border border-white/20 flex items-center justify-center hover:border-primary hover:text-primary transition-all" href="#"><span class="material-icons text-sm">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-bold uppercase tracking-widest mb-6 text-primary">Shop</h4>
+<ul class="space-y-4 text-sm text-white/60 uppercase tracking-wide">
+<li><a class="hover:text-white transition-colors" href="#">Supplements</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Apparel</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Equipment</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Bundles</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold uppercase tracking-widest mb-6 text-primary">Support</h4>
+<ul class="space-y-4 text-sm text-white/60 uppercase tracking-wide">
+<li><a class="hover:text-white transition-colors" href="#">Shipping Policy</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Returns &amp; Exchanges</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Track Order</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold uppercase tracking-widest mb-6 text-primary">Company</h4>
+<ul class="space-y-4 text-sm text-white/60 uppercase tracking-wide">
+<li><a class="hover:text-white transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Science</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Ambassadors</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-white/40 text-xs tracking-widest uppercase">© 2024 STRYDA PERFORMANCE. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-4">
+<img class="h-6 grayscale opacity-30 hover:opacity-100 transition-opacity" data-alt="Visa payment icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBISCyt0Me0GAEUvpRd5B9GBGHTK4h-O-xW5vyKFOFds8Oyrmpp9qoVZooM52msphcB6VgTaUcmUfIfGXJw0VeQAXqU4mnvXiyMFoTM6GzZqu-4RceFyk1GchXMRTunhssYAVeTOrlK0u1GVbCn56VcCQqb5B4ycMQQz9Fwq7GZlccxHVr8PjZN8Uh1uxr74UdAM8dTgBf-j98J5fBNNYzNDyhpztv86u9rsWhuugS9LPywylNKv9Y3l2Rt3VsLlgVqfEUf3SHo6pax"/>
+<img class="h-6 grayscale opacity-30 hover:opacity-100 transition-opacity" data-alt="Mastercard payment icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwoz3swvjtCam5Zn70AgSsHS-6F2BWn-BCBJZ7uamneEmVY-BGfQKyyFJ4d0jIUwVWcZS3gda3YbxsD3J8kDYTu3Yr96osvQxZEIgUv7Q_lH2JrANDF5zf8D2jImR66_xL65YN5SloRsXWZTIY1lLPY0x7PM1udVhUJORNKWF4iMkZoMwySPW0Dgj81VKUDxEHufuQJHO9WV7-qlNqzQL8ZzM47hYeGQKvUziU4sQm9mrFRqIuUcgwzuW_OQVW0XCgYSB-drLPPPyx"/>
+<img class="h-6 grayscale opacity-30 hover:opacity-100 transition-opacity" data-alt="Paypal payment icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIiUDizu_T86cqA13Rjd5eJmrxAvKOolH2LMGjBLQSQPkM_azoqZ2_EYpGCZcTRCt-aYN-i_fVaJTsZl2foPdVXYU-t543117Kvv_vWzjIA_JjlWn0EBDCcm7lmbrpDL3VH2cWkm6sNLcnQImr824vCQz_r0o-PurKb8j9smFK-y2fgHp-Riv6da0sm4RZ3sXFlae8G4j0yO_AVY4Px17grGlybjKQqE_utA_8mtGv35tyzeyXzaaH8AfTqvF70qXvfEspVVX8aLZZ"/>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
