@@ -11,19 +11,24 @@ export const Home: React.FC = () => {
     const [isMuted, setIsMuted] = useState(true);
 
     useEffect(() => {
-        // Auto-play audio when component mounts (muted by default)
+        // Set volume when component mounts
         if (audioRef.current) {
             audioRef.current.volume = 0.3; // Set volume to 30%
-            audioRef.current.play().catch(err => {
-                console.log('Audio autoplay prevented:', err);
-            });
         }
     }, []);
 
     const toggleMute = () => {
         if (audioRef.current) {
-            audioRef.current.muted = !isMuted;
-            setIsMuted(!isMuted);
+            const newMutedState = !isMuted;
+            audioRef.current.muted = newMutedState;
+            setIsMuted(newMutedState);
+
+            // Ensure audio plays when unmuted
+            if (!newMutedState) {
+                audioRef.current.play().catch(err => {
+                    console.log('Audio play prevented:', err);
+                });
+            }
         }
     };
 
