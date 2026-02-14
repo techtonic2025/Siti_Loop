@@ -13,7 +13,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     return (
         <div className="bg-surface-dark group">
             <div className="relative aspect-square overflow-hidden bg-white/5">
-                <Link to={`/product/${product.id}`} className="block w-full h-full">
+                <Link to={`/products/${product.id}`} className="block w-full h-full">
                     <img
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         src={product.image}
@@ -28,7 +28,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             </div>
             <div className="p-6">
                 <p className="text-white/50 text-xs uppercase tracking-widest mb-1">{product.category}</p>
-                <Link to={`/product/${product.id}`} className="block">
+                <Link to={`/products/${product.id}`} className="block">
                     <h4 className="font-bold text-lg mb-2 uppercase group-hover:text-primary transition-colors">
                         {product.name}
                     </h4>
