@@ -5,7 +5,7 @@ import { useCart } from '../context/CartContext';
 
 
 export const Header: React.FC = () => {
-    const { totalItems, toggleCart } = useCart();
+    const { totalItems } = useCart();
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
     return (
