@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #FCD34D;
+  --color-secondary: #6EE7B7;
+  --color-background-warm: #FFFBEB;
+  --color-text-dark: #1F2937;
+
+  --font-display: "Nunito", sans-serif;
+  --font-body: "Quicksand", sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    @apply bg-background-warm text-text-dark;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    @apply font-bold;
+  }
+}
