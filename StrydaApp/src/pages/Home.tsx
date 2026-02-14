@@ -1,12 +1,31 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Volume2, VolumeX } from 'lucide-react';
 import { products } from '../data/products';
 import { ProductCard } from '../components/ProductCard';
 
 export const Home: React.FC = () => {
     // const { cart } = useCart();
     const featuredProducts = products.filter(p => !['5', '6', '7', '8'].includes(p.id)); // Just showing first 4 as featured for now
+    const audioRef = useRef<HTMLAudioElement>(null);
+    const [isMuted, setIsMuted] = useState(true);
+
+    useEffect(() => {
+        // Auto-play audio when component mounts (muted by default)
+        if (audioRef.current) {
+            audioRef.current.volume = 0.3; // Set volume to 30%
+            audioRef.current.play().catch(err => {
+                console.log('Audio autoplay prevented:', err);
+            });
+        }
+    }, []);
+
+    const toggleMute = () => {
+        if (audioRef.current) {
+            audioRef.current.muted = !isMuted;
+            setIsMuted(!isMuted);
+        }
+    };
 
     return (
         <>
@@ -66,6 +85,30 @@ export const Home: React.FC = () => {
                 <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce">
                     <ChevronDown className="text-white/50" size={32} />
                 </div>
+
+                {/* Audio Control Button */}
+                <button
+                    onClick={toggleMute}
+                    className="absolute bottom-10 right-10 z-20 p-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-full transition-all duration-300 group"
+                    aria-label={isMuted ? "Unmute background music" : "Mute background music"}
+                >
+                    {isMuted ? (
+                        <VolumeX className="w-6 h-6 text-white group-hover:text-primary transition-colors" />
+                    ) : (
+                        <Volume2 className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
+                    )}
+                </button>
+
+                {/* Background Audio */}
+                <audio
+                    ref={audioRef}
+                    loop
+                    muted={isMuted}
+                    preload="auto"
+                >
+                    <source src="/audio/background-music.mp3" type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                </audio>
             </section>
 
             {/* Category Section */}
