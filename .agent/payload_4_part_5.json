@@ -1,0 +1,26 @@
+[
+  {
+    "path": "StrydaApp/tailwind.config.js",
+    "content": "/** @type {import('tailwindcss').Config} */\r\nexport default {\r\n    content: [\r\n        \"./index.html\",\r\n        \"./src/**/*.{js,ts,jsx,tsx}\",\r\n    ],\r\n    darkMode: \"class\",\r\n    theme: {\r\n        extend: {\r\n            colors: {\r\n                \"primary\": \"#d9ff00\",\r\n                \"background-light\": \"#f8f8f5\",\r\n                \"background-dark\": \"#050505\",\r\n                \"surface-dark\": \"#1A1A1A\",\r\n            },\r\n            fontFamily: {\r\n                \"display\": [\"Space Grotesk\", \"sans-serif\"]\r\n            },\r\n            borderRadius: {\r\n                \"DEFAULT\": \"0.125rem\",\r\n                \"lg\": \"0.25rem\",\r\n                \"xl\": \"0.5rem\",\r\n                \"full\": \"0.75rem\"\r\n            },\r\n        },\r\n    },\r\n    plugins: [],\r\n}\r\n"
+  },
+  {
+    "path": "StrydaApp/tsconfig.app.json",
+    "content": "{\n  \"compilerOptions\": {\n    \"tsBuildInfoFile\": \"./node_modules/.tmp/tsconfig.app.tsbuildinfo\",\n    \"target\": \"ES2022\",\n    \"useDefineForClassFields\": true,\n    \"lib\": [\"ES2022\", \"DOM\", \"DOM.Iterable\"],\n    \"module\": \"ESNext\",\n    \"types\": [\"vite/client\"],\n    \"skipLibCheck\": true,\n\n    /* Bundler mode */\n    \"moduleResolution\": \"bundler\",\n    \"allowImportingTsExtensions\": true,\n    \"verbatimModuleSyntax\": true,\n    \"moduleDetection\": \"force\",\n    \"noEmit\": true,\n    \"jsx\": \"react-jsx\",\n\n    /* Linting */\n    \"strict\": true,\n    \"noUnusedLocals\": true,\n    \"noUnusedParameters\": true,\n    \"erasableSyntaxOnly\": true,\n    \"noFallthroughCasesInSwitch\": true,\n    \"noUncheckedSideEffectImports\": true\n  },\n  \"include\": [\"src\"]\n}\n"
+  },
+  {
+    "path": "StrydaApp/tsconfig.json",
+    "content": "{\n  \"files\": [],\n  \"references\": [\n    { \"path\": \"./tsconfig.app.json\" },\n    { \"path\": \"./tsconfig.node.json\" }\n  ]\n}\n"
+  },
+  {
+    "path": "StrydaApp/tsconfig.node.json",
+    "content": "{\n  \"compilerOptions\": {\n    \"tsBuildInfoFile\": \"./node_modules/.tmp/tsconfig.node.tsbuildinfo\",\n    \"target\": \"ES2023\",\n    \"lib\": [\"ES2023\"],\n    \"module\": \"ESNext\",\n    \"types\": [\"node\"],\n    \"skipLibCheck\": true,\n\n    /* Bundler mode */\n    \"moduleResolution\": \"bundler\",\n    \"allowImportingTsExtensions\": true,\n    \"verbatimModuleSyntax\": true,\n    \"moduleDetection\": \"force\",\n    \"noEmit\": true,\n\n    /* Linting */\n    \"strict\": true,\n    \"noUnusedLocals\": true,\n    \"noUnusedParameters\": true,\n    \"erasableSyntaxOnly\": true,\n    \"noFallthroughCasesInSwitch\": true,\n    \"noUncheckedSideEffectImports\": true\n  },\n  \"include\": [\"vite.config.ts\"]\n}\n"
+  },
+  {
+    "path": "StrydaApp/vite.config.ts",
+    "content": "import { defineConfig } from 'vite'\nimport react from '@vitejs/plugin-react'\nimport tailwindcss from '@tailwindcss/vite'\n\n// https://vite.dev/config/\nexport default defineConfig({\n  plugins: [react(), tailwindcss()],\n})\n"
+  },
+  {
+    "path": "techtonic-pet-store/eslint.config.js",
+    "content": "import js from '@eslint/js'\nimport globals from 'globals'\nimport reactHooks from 'eslint-plugin-react-hooks'\nimport reactRefresh from 'eslint-plugin-react-refresh'\nimport tseslint from 'typescript-eslint'\nimport { defineConfig, globalIgnores } from 'eslint/config'\n\nexport default defineConfig([\n  globalIgnores(['dist']),\n  {\n    files: ['**/*.{ts,tsx}'],\n    extends: [\n      js.configs.recommended,\n      tseslint.configs.recommended,\n      reactHooks.configs.flat.recommended,\n      reactRefresh.configs.vite,\n    ],\n    languageOptions: {\n      ecmaVersion: 2020,\n      globals: globals.browser,\n    },\n  },\n])\n"
+  }
+]
