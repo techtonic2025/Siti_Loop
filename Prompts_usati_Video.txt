@@ -1,0 +1,216 @@
+--------------------------------------------------------------------------Prompt Stitch---------------------------------------------------------------------------------------------------------------------
+
+prendi come riferimento grafico l immagine in allegato e : 1. HOMEPAGE
+
+Hero impattante con prodotto energy
+
+CTA acquisto
+
+Sezioni: pre-workout, proteine, stack
+
+Best seller
+
+Benefici prodotto
+
+Testimonianze
+
+CTA finale
+
+Footer
+
+PAGINA PRODOTTI
+Grid moderna e aggressiva
+
+Filtri per categoria (energia, recupero, massa)
+
+Badge: best seller, new, pro
+
+Product card premium
+
+Search + sorting
+
+CHECKOUT
+Stile minimal dark
+
+Order summary
+
+Form pagamento mock
+
+Conferma ordine
+
+UX moderna e veloce
+
+--------------------------------------------------------------------------Prompt UI---------------------------------------------------------------------------------------------------------------------
+
+Connettiti via MCP a Stitch e accedi al progetto: Siti_Loop.
+
+Analizza il design e la struttura delle pagine esistenti.
+
+Partendo da questo layout neutro:
+
+* homepage
+* pagina prodotti
+* checkout
+
+Genera due varianti complete mantenendo identica struttura e componenti.
+
+VARIANTE 1 — PET STORE
+Trasforma il design in brand e-commerce animali.
+Cambia palette colori (soft, caldi, friendly).
+Sostituisci immagini con pet lifestyle.
+Tipografia morbida e moderna.
+Mood: affidabile, familiare, premium pet brand.
+
+VARIANTE 2 — FITNESS / ENERGY STORE
+Duplica lo stesso layout.
+Trasforma in brand fitness/energy.
+Palette dark + neon accent.
+Font più aggressivo e moderno.
+Immagini fitness/gym/energy.
+Mood: performance, sportivo, futuristico.
+
+OUTPUT RICHIESTO:
+- Due versioni/progetti in Stitch (o due set di pagine chiaramente separati)
+- Tokens per ciascuna variante (palette + typography + spacing) in formato riassuntivo
+- Preview/export delle 3 pagine per ciascuna variante (se disponibile via MCP)
+
+Esegui in ordine e riportami gli step completati.
+
+
+--------------------------------------------------------------------------Prompt Logica Applicativa---------------------------------------------------------------------------------------------------------------------
+Connettiti via MCP a Stitch e accedi al progetto: Siti_Loop.
+
+Recupera tutte le interfacce UI generate (formato desktop):
+ • Homepage
+ • Pagina Prodotti (Catalogo)
+ • Checkout
+
+⸻
+
+Obiettivo:
+
+Trasforma queste UI in un progetto web locale funzionante (demo realistica) con navigazione e interazioni reali.
+
+⸻
+
+REQUISITI FUNZIONALI (IMPORTANTE)
+
+1) Navigazione e routing
+ • Tutti i link e CTA devono funzionare.
+ • Flusso minimo: Home → Products → Checkout.
+ • Header e footer consistenti su tutte le pagine.
+ • Pulsanti “Shop / Products / Add to cart / Checkout / Back” devono portare alle pagine corrette.
+
+⸻
+
+2) Prodotti reali (mock)
+ • Crea un piccolo dataset locale (array JSON) con 8–12 prodotti.
+ • Ogni prodotto:
+ • id
+ • nome
+ • categoria
+ • descrizione breve
+ • prezzo
+ • immagine (placeholder)
+ • badge (es. NEW / BEST)
+ • rating opzionale
+ • La pagina Products deve mostrare i prodotti dal dataset.
+ • Implementa almeno:
+ • filtro per categoria (anche semplice)
+ • sorting base (prezzo o “popolari”) oppure search semplice (uno dei due va bene)
+
+⸻
+
+3) Carrello e checkout dimostrativo (NO PAGAMENTO)
+ • Implementa carrello locale (state) con:
+ • aggiungi / rimuovi
+ • quantità
+ • totale
+
+Checkout:
+ • form shipping (nome, email, indirizzo, città, CAP)
+ • validazione semplice (campi obbligatori + email valida)
+ • order summary con totale
+ • bottone “Conferma ordine” (senza integrazione pagamento)
+
+Dopo conferma ordine:
+ • mostra una schermata/pagina “Order Confirmed” dimostrativa con riepilogo ordine e numero ordine finto.
+
+⸻
+
+4) Fedeltà UI
+ • Mantieni layout, spacing, tipografia e stile visivo coerenti con Stitch.
+ • Desktop-first (viewport 1440px) ma senza rompere la responsive base.
+ • Stati minimi: loading / empty / error almeno sulla pagina prodotti.
+
+⸻
+
+OUTPUT RICHIESTO
+ • Crea il progetto in locale con struttura chiara e componenti riusabili
+(Header, Footer, ProductCard, Filters, Cart).
+ • Fornisci:
+ • istruzioni per avvio progetto
+ • struttura cartelle
+ • codice completo pronto da eseguire
+
+--------------------------------------------------------------------------Prompt Video Pet Store Flow---------------------------------------------------------------------------------------------------------------------
+
+Cinematic hero video for a modern online pet shop website. Focus on products and shopping experience, not only pets. Start with elegant slow motion shots of premium pet products displayed on a clean modern surface: toys, collars, bowls, leashes, healthy pet food, accessories. Show a hand placing colorful pet toys and accessories on a table like in a professional ecommerce shoot. Transition to a playful dog interacting with a toy, then a cat playing with a modern scratching toy. Cut to close-up of premium pet food being poured into a stylish bowl in slow motion. Show a modern pet store or clean ecommerce studio setup with products arranged beautifully like a commercial shoot. Focus on textures, materials, and product details. Lighting: bright premium ecommerce lighting, soft natural sunlight mixed with studio light. Style: modern Shopify-style brand commercial, clean, minimal, high-end ecommerce. Camera: smooth cinematic close-ups, product focus, slow motion, shallow depth of field. Mood: modern, premium, trustworthy shop, visually satisfying. No text, no logo. Designed for homepage hero section loop for an online pet store. Duration: 6–8 seconds Aspect ratio: 16:9 Ultra realistic, cinematic ecommerce commercial, 4K, soft shadows, premium product showcase. aggiungi alla fine: high-end ecommerce commercial, shop hero section, product-focused video, visually appealing online store aesthetic, premium brand feeling
+
+
+--------------------------------------------------------------------------Prompt Video Fitness Flow---------------------------------------------------------------------------------------------------------------------
+
+Cinematic hero video for a modern energy drink ecommerce website. Start with a close-up of a sleek futuristic energy drink can on a dark background. The can slowly rotates with dramatic lighting. Suddenly it bursts open with dynamic splash of liquid and energy particles exploding outward in slow motion. Bright electric colors like neon blue, red and orange create a powerful energetic atmosphere. Transition to fast shots of gym training: athlete grabbing the drink, intense workout movements, sweat and motion. Show product clearly as main focus. Style: high-end commercial, Nike style advertising, powerful and energetic. Lighting: dramatic contrast, neon glow, strong highlights. Camera: slow motion + dynamic cinematic movement. Mood: power, energy, performance, strength. No text, no logo. Designed for ecommerce hero section loop. Duration: 6–8 seconds Aspect ratio: 16:9 Ultra realistic, cinematic commercial quality, 4K.
+
+
+--------------------------------------------------------------------------Prompt Integro Video Hero section Pet Store---------------------------------------------------------------------------------------------------------------------
+
+
+
+Il progetto su cui lavoriamo si chiama: techtonic-pet-store.
+
+Obiettivo: integrare un video di presentazione nella HERO della landing in modo estremamente moderno, premium e perfettamente integrato.
+
+Ti caricherò a breve il video.
+
+Quello che devi fare:
+ • Integrare il video nella hero principale del sito
+ • Quando un utente entra deve vedere subito il video di presentazione
+ • Deve sembrare una landing SaaS top-tier (stile Apple / Stripe / Linear)
+
+⸻
+
+Linee guida UX/UI:
+ • Il video deve essere perfettamente integrato nel design (non appoggiato a caso)
+ • Puoi decidere tu:
+ • se usarlo come background hero
+ • se usarlo in un video container premium
+ • se tagliare/loopare una parte
+ • durata ideale
+ • Autoplay muted + loop intelligente
+ • Overlay gradient se serve per leggibilità testo
+ • Titolo + sottotitolo + CTA ben visibili
+ • Look moderno, clean, tech
+
+⸻
+
+Tecnico:
+ • Codice production-ready
+ • Ottimizzato performance (compressione, lazy load se serve)
+ • Perfettamente responsive
+ • Mobile ottimizzato (su mobile valuta fallback immagine + click to play se meglio)
+ • Mantieni coerenza design con il sito
+
+⸻
+
+Output:
+ 1. Migliore soluzione UX/UI possibile
+ 2. Hero completa con video integrato
+ 3. Codice pulito pronto per produzione
+ 4. Se hai idee migliori della mia → applicale direttamente
+
+prendi come video ▶ Video_Hero_Pet.mp4
+
+
+
+
